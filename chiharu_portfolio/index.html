@@ -15,8 +15,27 @@
                 <img src="./images/header_logo@2x.png" alt="チハルデザイン"/>
             </a>
         </h1>
-        <nav>
-            <ul class="header_nav">
+        <nav class="header_nav">
+            <ul>
+                <li>
+                    <a href="#concept">CONCEPT</a>
+                </li>
+                <li>
+                    <a href="#about">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#works">WORKS</a>
+                </li>
+                <li>
+                    <a href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <span></span>
+        </div>
+        <nav class="header_nav_sp">
+            <ul>
                 <li>
                     <a href="#concept">CONCEPT</a>
                 </li>
@@ -33,6 +52,7 @@
         </nav>
     </header>
     <main>
+    <div class="main_visual">
         <div class="text">
             <p class="catchphrase">
                 あなたの想いを<br>カタチに。
@@ -50,6 +70,7 @@
         <div class="scroll">
             <span>Scroll</span>
         </div>
+    </div>
         <section class="loop_wrapper">
             <div class="loop_right_double">
              <img src="./images/loop_design.png">
@@ -151,13 +172,80 @@
               name="username"
               class="contact_form_input"
               id="field_name"
-              placeholder="名字 名前"
+              placeholder=""
               type="text"
               required="required"
             />
             </div>
+            <div class="contact_form_item">
+                <label class="contact_form_label" for="field_company">
+                    Company
+                </label>
+                <input
+              name="username"
+              class="contact_form_input"
+              id="field_company"
+              placeholder=""
+              type="text"
+              required="required"
+            />
+            </div>
+            <div class="contact_form_item">
+                <label class="contact_form_label" for="field_address">
+                    E-mail
+                </label>
+                <input
+              name="username"
+              class="contact_form_input"
+              id="field_address"
+              placeholder=""
+              type="text"
+              required="required"
+            />
+            </div>
+            <div class="contact_form_item">
+                <label class="contact_form_labe_message" for="field_message">
+                    お問い合わせ内容
+                </label>
+                <input
+              name="username"
+              class="contact_form_message"
+              id="field_address"
+              placeholder=""
+              type="text"
+              required="required"
+            />
+            </div>
+            <div class="submit_btn">
+                <input type="submit" name="button" class="submit" value="送信する">
+            </div>
             </form>
           </section>
+          <footer>
+            <div class="footer_wrap">
+                <ul class="footer_nav">
+                    <li>CONCEPT</li>
+                    <li>ABOUT</li>
+                    <li>WORKS</li>
+                    <li>CONTACT</li>
+                    <li class="instagram_icon">
+                        <a href="" id="instagram_icon" target="_blank">
+                            <img src="./images/instagram.png" alt="Instagramのアイコン">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p class="copyright">@CHIHARU DESIGN</p>
+          </footer>
     </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   
+<script>
+    $(function () {
+        $(".hamburger").click(function () {
+            $(".hamburger").toggleClass("open");
+            $(".hamburger_nav_sp").fadeToggle();
+        });
+    });
+</script>
 </body>
 </html>
